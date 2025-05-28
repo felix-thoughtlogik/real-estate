@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_real_estate_property_dealer,access.real_estate.properties.dealer,model_real_estate_properties,real_estate.group_real_estate_dealer,1,1,1,1
+access_real_estate_properties_tags,access.real_estate.properties_tags,model_real_estate_properties_tags,real_estate.group_real_estate_dealer,1,1,1,1
+access_real_estate_properties_stage,access.real_estate_.properties_stage,model_real_estate_properties_stage,real_estate.group_real_estate_dealer,1,1,1,1
+
+
+
