@@ -16,8 +16,11 @@ Real Estate Management for Odoo Community
         'security/security.xml',  # Security rules, e.g., user permissions
         'security/ir.model.access.csv',  # Your access control list (ACL) file if needed
         'views/properties_views.xml',
-        'views/properties_stages.xml',# Your views XML file
+        'views/properties_stages.xml',
+        'views/crm_views.xml',
         'data/properties_stage_data.xml',
+
+        'wizard/convert_company_user.xml',
     ],
     'installable': True,
     'application': True,

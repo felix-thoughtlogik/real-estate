@@ -3,5 +3,5 @@ access_real_estate_property_dealer,access.real_estate.properties.dealer,model_re
 access_real_estate_properties_tags,access.real_estate.properties_tags,model_real_estate_properties_tags,real_estate.group_real_estate_dealer,1,1,1,1
 access_real_estate_properties_stage,access.real_estate_.properties_stage,model_real_estate_properties_stage,real_estate.group_real_estate_dealer,1,1,1,1
 
-
+access_crm_create_company_user_wizard,crm.create.company.user.wizard,model_crm_create_company_user_wizard,,1,1,1,1
 
