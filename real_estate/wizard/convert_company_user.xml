@@ -7,17 +7,25 @@
         <field name="arch" type="xml">
             <form string="Create Company/User">
                 <group>
-                    <group>
-                        <field name="create_company"/>
-                    </group>
+
                     <group>
                         <field name="create_user"/>
+                        <field name="partner_name"/>
+                        <field name="partner_email"/>
+
+                    </group>
+                    <group >
+                        <field name="create_company"/>
+                        <div invisible="not company_exists">
+                            <p>You can't create company, already Exits!</p>
+                        </div>
+                        <field name="parent_company_name" invisible="not create_company"/>
+                        <field name="parent_company_email" invisible="not create_company"/>
                     </group>
                 </group>
-                <group>
-                    <field name="company_id" invisible="not create_company"/>
+                <group invisible="1">
+                    <field name="parent_company_id"/>
                     <field name="partner_id"/>
-                    <field name="email"/>
                 </group>
                 <footer>
                     <button name="action_confirm" string="Create" type="object" class="btn-primary"/>
