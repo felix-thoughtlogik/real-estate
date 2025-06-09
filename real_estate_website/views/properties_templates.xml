@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="properties" name="Properties">
+        <t t-call="website.layout">
+            <div class="banner">
+                <img src="real_estate_website\static\image\banner.jpg" alt="banner" class="banner"/>
+                <h1>Welcome to the Real Estate Websitee</h1>
+            </div>
+        </t>
+    </template>
+   
+</odoo>

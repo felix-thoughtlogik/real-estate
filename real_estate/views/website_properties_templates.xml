@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="property_list" name="Property List Page">
+        <t t-call="website.layout">
+            <div class="container my-5">
+                <h2 class="mb-4 text-center">Available Properties</h2>
+
+                <!-- Not Found Message -->
+                <t t-if="not_found">
+                    <div class="alert alert-warning text-center">
+                        <t t-if="not_found_type == 'property'">Property not found.</t>
+                        <t t-elif="not_found_type == 'category'">Category not found.</t>
+                        <t t-elif="not_found_type not in ['property', 'category']">Item not found.</t>
+                    </div>
+                </t>
+
+                <!-- Filter Bar -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="Search by name..." />
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control">
+                            <option value="">Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control">
+                            <option value="">Location</option>
+                            <option value="city1">City 1</option>
+                            <option value="city2">City 2</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100">Filter</button>
+                    </div>
+                </div>
+
+                <!-- Property Grid -->
+                <div class="row">
+                    <t t-foreach="properties" t-as="property">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <img t-att-src="'/web/image/property.property/' + str(property.id) + '/main_image'"
+                                     class="card-img-top"
+                                     t-att-alt="property.name or 'Property Image'" />
+
+                                <div class="card-body">
+                                    <h5 class="card-title"><t t-esc="property.name" /></h5>
+                                    <p class="card-text">
+                                        <t t-esc="(property.description or '')[:100]" />...
+                                    </p>
+                                    <p class="text-muted">
+                                        <strong>Location:</strong> <t t-esc="property.city" />
+                                    </p>
+                                    <p class="text-muted">
+                                        <strong>Furnishing:</strong> <t t-esc="property.furnishing or 'N/A'" />
+                                    </p>
+                                    <p class="text-primary fw-bold">
+                                        ₹ <t t-esc="property.price" />
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <a t-att-href="'/properties/' + property.slug" class="btn btn-outline-primary btn-sm">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="property_details">
+        <t t-call="website.layout">
+
+        </t>
+    </template>
+</odoo>

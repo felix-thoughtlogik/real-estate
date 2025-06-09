@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Residential -->
+    <record id="cat_residential" model="property.category">
+        <field name="name">Residential</field>
+        <field name="description">Properties for living</field>
+    </record>
+    <record id="sub_apartment" model="property.category">
+        <field name="name">Apartment</field>
+        <field name="parent_id" ref="cat_residential"/>
+    </record>
+    <record id="sub_villa" model="property.category">
+        <field name="name">Villa</field>
+        <field name="parent_id" ref="cat_residential"/>
+    </record>
+    <record id="sub_studio" model="property.category">
+        <field name="name">Studio Apartment</field>
+        <field name="parent_id" ref="cat_residential"/>
+    </record>
+    <record id="sub_duplex" model="property.category">
+        <field name="name">Duplex</field>
+        <field name="parent_id" ref="cat_residential"/>
+    </record>
+
+    <!-- Commercial -->
+    <record id="cat_commercial" model="property.category">
+        <field name="name">Commercial</field>
+        <field name="description">Business and commerce properties</field>
+    </record>
+    <record id="sub_office" model="property.category">
+        <field name="name">Office Space</field>
+        <field name="parent_id" ref="cat_commercial"/>
+    </record>
+    <record id="sub_shop" model="property.category">
+        <field name="name">Retail Shop</field>
+        <field name="parent_id" ref="cat_commercial"/>
+    </record>
+    <record id="sub_showroom" model="property.category">
+        <field name="name">Showroom</field>
+        <field name="parent_id" ref="cat_commercial"/>
+    </record>
+    <record id="sub_warehouse" model="property.category">
+        <field name="name">Warehouse</field>
+        <field name="parent_id" ref="cat_commercial"/>
+    </record>
+
+    <!-- Agricultural -->
+    <record id="cat_agricultural" model="property.category">
+        <field name="name">Agricultural</field>
+        <field name="description">Farmlands and plantations</field>
+    </record>
+    <record id="sub_farm" model="property.category">
+        <field name="name">Farm Land</field>
+        <field name="parent_id" ref="cat_agricultural"/>
+    </record>
+    <record id="sub_plantation" model="property.category">
+        <field name="name">Plantation</field>
+        <field name="parent_id" ref="cat_agricultural"/>
+    </record>
+
+    <!-- Industrial -->
+    <record id="cat_industrial" model="property.category">
+        <field name="name">Industrial</field>
+        <field name="description">Factory, godown, and industrial use</field>
+    </record>
+    <record id="sub_factory" model="property.category">
+        <field name="name">Factory</field>
+        <field name="parent_id" ref="cat_industrial"/>
+    </record>
+    <record id="sub_godown" model="property.category">
+        <field name="name">Godown</field>
+        <field name="parent_id" ref="cat_industrial"/>
+    </record>
+
+    <!-- Land -->
+    <record id="cat_land" model="property.category">
+        <field name="name">Land</field>
+        <field name="description">Plotted lands for various use</field>
+    </record>
+    <record id="sub_res_land" model="property.category">
+        <field name="name">Residential Plot</field>
+        <field name="parent_id" ref="cat_land"/>
+    </record>
+    <record id="sub_comm_land" model="property.category">
+        <field name="name">Commercial Plot</field>
+        <field name="parent_id" ref="cat_land"/>
+    </record>
+    <record id="sub_agri_land" model="property.category">
+        <field name="name">Agricultural Plot</field>
+        <field name="parent_id" ref="cat_land"/>
+    </record>
+
+</odoo>

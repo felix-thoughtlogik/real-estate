@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
-    <record model="real_estate.properties.stage" id="stage_property1" forcecreate="False">
+    <record model="property.stage" id="stage_property1" forcecreate="False">
         <field name="name">Draft</field>
         <field name="sequence">1</field>
     </record>
-    <record model="real_estate.properties.stage" id="stage_property2" forcecreate="False">
+    <record model="property.stage" id="stage_property2" forcecreate="False">
         <field name="name">Listed</field>
         <field name="sequence">2</field>
     </record>
-       <record model="real_estate.properties.stage" id="stage_property3" forcecreate="False">
+       <record model="property.stage" id="stage_property3" forcecreate="False">
         <field name="name">Rented</field>
         <field name="fold" eval="False"/>
         <field name="is_won">True</field>
         <field name="sequence">80</field>
     </record>
-    <record model="real_estate.properties.stage" id="stage_property4" forcecreate="False">
+    <record model="property.stage" id="stage_property4" forcecreate="False">
         <field name="name">Sold</field>
         <field name="fold" eval="False"/>
         <field name="is_won">True</field>
         <field name="sequence">70</field>
     </record>
 
-    <record model="real_estate.properties.stage" id="stage_property5" forcecreate="False">
+    <record model="property.stage" id="stage_property5" forcecreate="False">
         <field name="name">Cancelled</field>
         <field name="sequence">90</field>
     </record>

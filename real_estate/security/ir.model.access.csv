@@ -1,7 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_real_estate_property_dealer,access.real_estate.properties.dealer,model_real_estate_properties,real_estate.group_real_estate_dealer,1,1,1,1
-access_real_estate_properties_tags,access.real_estate.properties_tags,model_real_estate_properties_tags,real_estate.group_real_estate_dealer,1,1,1,1
-access_real_estate_properties_stage,access.real_estate_.properties_stage,model_real_estate_properties_stage,real_estate.group_real_estate_dealer,1,1,1,1
+access_property_property,access.property_property,model_property_property,base.group_user,1,1,1,1
+access_property_tags,access.property_tags,model_property_tag,base.group_user,1,1,1,1
+access_property_stage,access.property_stage,model_property_stage,base.group_user,1,1,1,1
+access_property_image,access.property_image,model_property_image,base.group_user,1,1,1,1
+access_property_floor_type,access.property_floor_type,model_property_floor_type,base.group_user,1,1,1,1
+access_property_amenity,access.property_amenity,model_property_amenity,base.group_user,1,1,1,1
+access_property_category,access.property_category,model_property_category,base.group_user,1,1,1,1
 
-access_crm_create_company_user_wizard,crm.create.company.user.wizard,model_crm_create_company_user_wizard,,1,1,1,1
 
