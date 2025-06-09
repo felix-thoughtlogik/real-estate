@@ -1,7 +1,7 @@
 {
     'name': 'Real Estate Management',
     'version': '1.1.0',
-    'summary': 'Manage real estate properties, dealers, and customer contacts',
+    'summary': 'Manage real estate properties, sellers, and customer contacts',
     'description': """
 Real Estate Management for Odoo Community
 - CRM Integration
@@ -13,14 +13,14 @@ Real Estate Management for Odoo Community
     'category': 'Sales/CRM',
     'depends': ['base', 'crm', 'contacts'],
     'data': [
-        'security/security.xml',  # Security rules, e.g., user permissions
+        # 'security/security.xml',  # Security rules, e.g., user permissions
         'security/ir.model.access.csv',  # Your access control list (ACL) file if needed
         'views/properties_views.xml',
-        'views/properties_stages.xml',
-        'views/crm_views.xml',
+        'views/properties_stages_views.xml',
+        'views/properties_seller_views.xml',
+        'views/properties_templates.xml',
+        'views/menu.xml',
         'data/properties_stage_data.xml',
-
-        'wizard/convert_company_user.xml',
     ],
     'installable': True,
     'application': True,

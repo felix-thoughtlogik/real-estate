@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="property_list">
+        <t t-call="website.layout">
+
+        </t>
+    </template>
+    <template id="property_details">
+        <t t-call="website.layout">
+
+        </t>
+    </template>
+</odoo>

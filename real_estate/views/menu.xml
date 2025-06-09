@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Menu Items for Real Estate Properties -->
+    <record id="action_property_property_view" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">property.property</field>
+        <field name="view_mode">kanban,list,form,calendar,graph,pivot</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no properties available. Click here to add a new property.
+            </p>
+        </field>
+    </record>
+    <record id="action_property_stages_view" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">property.stage</field>
+        <field name="view_id" ref="real_estate.property_stage_list_view"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Set a new stage in your opportunity pipeline
+            </p><p>
+            Stages allow salespersons to easily track how a specific opportunity
+            is positioned in the sales cycle.
+        </p>
+        </field>
+
+    </record>
+    <record id="action_property_tags_view" model="ir.actions.act_window">
+        <field name="name">Sellers</field>
+        <field name="res_model">property.tag</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no tags available. Click here to add a new tags.
+            </p>
+        </field>
+    </record>
+    <record id="action_property_image_view" model="ir.actions.act_window">
+        <field name="name">Property Images</field>
+        <field name="res_model">property.image</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no tags available. Click here to add a new images.
+            </p>
+        </field>
+    </record>
+    <record id="action_property_floor_type_view" model="ir.actions.act_window">
+        <field name="name">Floor Type</field>
+        <field name="res_model">property.floor.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no tags available. Click here to add a new Floor type.
+            </p>
+        </field>
+    </record>
+    <record id="action_property_amenity_view" model="ir.actions.act_window">
+        <field name="name">Amenities</field>
+        <field name="res_model">property.amenity</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There are no tags available. Click here to add a new Amenity.
+            </p>
+        </field>
+    </record>
+     <record id="action_partner_sellers_only" model="ir.actions.act_window">
+            <field name="name">Sellers</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="domain">[('is_seller', '=', True)]</field>
+        </record>
+    <menuitem id="properties_menu_root" name="Properties" sequence="10"/>
+    <menuitem name="Properties" id="properties_menu" parent="properties_menu_root" action="action_property_property_view"/>
+    <menuitem name="Sellers" id="Sellers_menu" parent="properties_menu_root" action="action_partner_sellers_only"/>
+    <menuitem name="Configuration" id="configuration_menu" parent="properties_menu_root"/>
+    <menuitem name="Stages" id="stage_menu" parent="configuration_menu" action="action_property_stages_view"/>
+    <menuitem name="Tags" id="tags_menu" parent="configuration_menu" action="action_property_tags_view"/>
+    <menuitem name="Amenities" id="amenity_menu" parent="configuration_menu" action="action_property_amenity_view"/>
+    <menuitem name="Floor Types" id="floor_type_menu" parent="configuration_menu" action="action_property_floor_type_view"/>
+    <menuitem name="Images" id="images_menu" parent="configuration_menu" action="action_property_image_view"/>
+</odoo>
